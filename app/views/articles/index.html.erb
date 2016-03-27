@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="jumbotron">
+   <h1>Index</h1>
+
+      <% @articles.each do |article| %>
+        <div class="row">
+            <div class="col-md-7">
+                <%= image_tag article.image.url(:medium), :class => "img-responsive", :class => "center-block" %>
+            </div>
+            <div class="col-md-5">
+                <h3><%= article.title %></h3>
+                <p><%=h truncate(article.text, :length => 167) %></p>
+                <div class="btn btn-success"> <%= link_to 'Read more', article_path(article) %>
+                </div>
+            </div>
+        </div>
+
+      <%= link_to 'Edit', edit_article_path(article) %>
+      <%= link_to 'Delete', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+      <hr>
+    <% end %>
+
+
+    <%= link_to 'New article', new_article_path %>
+  </div>
+</div>
+
