@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.4'
+ruby '2.0.0'
 
 gem 'rails', '4.2.2'
 gem 'pg'
@@ -11,7 +11,6 @@ gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'aws-sdk'
-gem 'rails_12factor', '~> 0.0.3'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'jbuilder', '~> 2.0'
@@ -26,5 +25,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+ 	gem 'rails_12factor', '~> 0.0.3'
 end
 
