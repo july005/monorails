@@ -81,10 +81,10 @@
                     <div class="container">
                         <div class="jumbotron">
                             <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Monorails and Mickey Tales</h1>
-                            <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Your Fairy Godmother of Disney trip advice</h3>
-                            <div class= "img-responsive center-block box-icon rotate"> 
-                                <i class="fa fa-magic fa-4x "> </i> 
-                            </div>
+                            <div class="img-responsive center-block box-icon-large rotate"><%= image_tag("fairygirledit.png") %></div>
+                           
+                            <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">I'm your Fairy Godmother of Walt Disney World trip planning</h3>
+
                         </div> 
                     </div>
                 </div>
@@ -206,7 +206,11 @@
                         </div>
                     </div>
 
-                    <input type="submit" name="submit" id="submit" value="Submit" class="btn wow tada btn-embossed btn-primary pull-right">
+                    <div class= "img-responsive center-block box-icon rotate"> <i class="fa fa-magic fa-4x "> <input type="submit" name="submit" id="submit" value="Submit"> </i>
+                    </div>
+
+                                 
+                    </div>
                 </div>
             </form>
             
@@ -230,7 +234,7 @@
             <div class="row">
                 <% @articles.each do |article| %>
                     <div class="col-sm-6 pull-right wow fadeInRightBig">
-                        <<%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
+                        <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
                     </div>
                     <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
                         <div class="row">
@@ -339,15 +343,14 @@
             <div class="row">
             
                 <div class="col-sm-4 wow fadeInDown text-center">
-                  <img class="rotate" src="img/icon/tweet.svg" alt="Generic placeholder image">
-                  <h3 class="h3_home wow fadeIn">Resorts</h3>
-                  <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-
-                  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                    <%= link_to image_tag("archives_resort.jpg", class: "rotate", size: "300x300") %>
+                    <h3 class="h3_home wow fadeIn">Resorts</h3>
+                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
+                    <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
                 
                 <div class="col-sm-4 wow fadeInDown text-center">
-                  <img  class="rotate" src="img/icon/picture.svg" alt="Generic placeholder image">
+                   <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
                    <h3 class="h3_home wow fadeIn">Parks</h3>
                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
                    <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
@@ -920,7 +923,7 @@
                         </li>
                     </ul>
                     <hr class="small">
-                    <p class="text-muted">Copyright &copy; Your Website 2014</p>
+                    <p class="text-muted">Copyright &copy; monorailsandmickeytales 2016</p>
                 </div>
             </div>
         </div>
