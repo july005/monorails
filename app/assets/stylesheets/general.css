@@ -206,6 +206,25 @@ width: 50px;
 	color: #fff;
 }
 
+.box-icon-large {
+	height: 200px;
+	width: 200px;
+	-moz-border-radius: 35px;
+	border-radius: 100%;
+	padding: 47px 10px;
+	
+
+	text-align: center;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-right: 15px;
+}
+
+.box-icon-large:hover {
+
+}
+
 .owl-theme .owl-controls .owl-page span {
 background: #1abc9c !important;
 }

@@ -10,7 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
-gem 'aws-sdk', '< 2.0'
+gem 'aws-sdk', '~> 2.2', '>= 2.2.26'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'jbuilder', '~> 2.0'
