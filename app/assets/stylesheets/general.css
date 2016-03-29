@@ -22,18 +22,14 @@ h2 {
 
 ::selection{background:#1abc9c;color:white}
 
-.abcen{position: absolute;bottom: 8%;}
+.abcen{position: absolute;bottom: 80%;}
 
 .abcen1{position: absolute;top: 20%;}
 
 .abcen2{position: absolute;top: 13%;}
 
-.content-section-c {
-	border-top: 1px solid #32465A;
-	border-bottom: 1px solid #32465A;
-	background-color: #34495e;
-	padding: 90px 0;
-}
+.abcen3{position: absolute;top: 75%;}
+
 
 .descp{
 	margin: 0;
@@ -331,11 +327,18 @@ margin: 0 auto;
 .content-section-a {
 	background-color: #f8f8f8;
 	padding: 90px 0; 
+	border-top: 1px solid 	 	#F5E3D7;
+	border-bottom: 1px solid 	#F5E3D7;
 }
 
 .content-section-b {
-	border-top: 1px solid #e7e7e7;
-	border-bottom: 1px solid #e7e7e7;
+	border-top: 1px solid 	 	#d5e4ec;
+	border-bottom: 1px solid 	#d5e4ec;
+	padding: 90px 0; 
+}
+
+.content-section-c {
+	background-color: #f8f8f8;
 	padding: 90px 0; 
 }
 
