@@ -35,6 +35,10 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def self.secondlatestpost
+    order("published_at DESC").offset(1).limit(1).first
+  end
+
   def destroy
     @article = Article.find(params[:id])
     @article.destroy

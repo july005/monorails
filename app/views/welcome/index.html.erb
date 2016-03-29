@@ -16,22 +16,20 @@
   	**********
   	-->
 
-		<%= stylesheet_link_tag "bootstrap.min" %>
-        <%= stylesheet_link_tag "general" %>
-        <%= stylesheet_link_tag "bootstrap" %>
-        <%= stylesheet_link_tag "bootstrapTheme" %>
+	<%= stylesheet_link_tag "bootstrap.min" %>
+    <%= stylesheet_link_tag "general" %>
+    <%= stylesheet_link_tag "bootstrap" %>
+    <%= stylesheet_link_tag "bootstrapTheme" %>
 
     <!-- Owl-Carousel CSS -->
-        <%= stylesheet_link_tag "custom" %>
-        <%= stylesheet_link_tag "owl.carousel" %>
-        <%= stylesheet_link_tag "owl.theme" %>
-        <%= stylesheet_link_tag "style" %>
-        <%= stylesheet_link_tag "animate" %>
-
+    <%= stylesheet_link_tag "custom" %>
+    <%= stylesheet_link_tag "owl.carousel" %>
+    <%= stylesheet_link_tag "owl.theme" %>
+    <%= stylesheet_link_tag "style" %>
+    <%= stylesheet_link_tag "animate" %>
 
     <!-- Magnific Popup core CSS file -->
     <%= stylesheet_link_tag "magnific-popup" %>
-
     
     <!--JS-->
     <%= javascript_include_tag "modernizr-2.8.3.min" %>
@@ -77,18 +75,16 @@
 
 
     <div class="intro-header">
-                <div class="col-xs-12 text-center abcen1">
-                    <div class="container">
-                        <div class="jumbotron">
-                            <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Monorails and Mickey Tales</h1>
-                            <div class="img-responsive center-block box-icon-large rotate"><%= image_tag("fairygirledit.png") %></div>
-                           
-                            <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">I'm your Fairy Godmother of Walt Disney World trip planning</h3>
-
-                        </div> 
-                    </div>
-                </div>
+        <div class="col-xs-12 text-center abcen2">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Monorails and Mickey Tales</h1>
+                    <div class="img-responsive center-block box-icon-large rotate"><%= image_tag("fairygirledit.png") %></div>
+                    <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">I'm your Fairy Godmother of Walt Disney World trip planning</h3>
+                </div> 
             </div>
+        </div>
+    </div>
 
 
                     <!-- buttons I'm not using 
@@ -230,6 +226,7 @@
             <p class="lead" style="margin-top:0">Everything you didn't know you need to know about Disney.</p>
         </div>
 
+
         <div class="container">
             <div class="row">
                 <% @articles.each do |article| %>
@@ -237,13 +234,11 @@
                         <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
                     </div>
                     <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
-                        <div class="row">
-                            <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
-                        </div>
+                        <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
                         <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs
                         </div>
                         <p class="lead">
-                            <%=h truncate(article.text, :length => 267) %>
+                            <%=h truncate(article.text, :length => 200) %>
                         </p>
                         <div class="btn btn-embossed btn-warning"> 
                             <%= link_to 'Read more', article_path(article) %>
@@ -253,78 +248,56 @@
             </div>
         </div>
         <!-- /.container -->
-
-
-
-
-
     </div>
+
 
     <div class="content-section-b"> 
-        
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 wow fadeInLeftBig">
-                     <div id="owl-demo-1" class="owl-carousel">
-                        <a href="iphone.png" class="image-link">
-                            <div class="item">
-                                <img  class="img-responsive img-rounded" src="iphone.png" alt="">
-                            </div>
-                        </a>
-                        <a href="iphone.png" class="image-link">
-                            <div class="item">
-                                <img  class="img-responsive img-rounded" src="iphone.png" alt="">
-                            </div>
-                        </a>
-                        <a href="iphone.png" class="image-link">
-                            <div class="item">
-                                <img  class="img-responsive img-rounded" src="iphone.png" alt="">
-                            </div>
-                        </a>
-                    </div>       
-                </div>
-                
-                <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">   
-                     <h2 class="h2_home wow fadeIn">Resort Reviews</h2>
-                    <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
-                    <p class="lead">
-                        In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. 
-                        Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, 
-                        uam non erat mirum sapientiae lorem cupido
-                        patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.
-                    </p>
-
-                     <p><a class="btn btn-embossed btn-primary" href="#" role="button">View Details</a> 
-                     <a class="btn btn-embossed btn-info" href="#" role="button">Visit Website</a></p>
-                </div>              
+                <% @articles.each do |article| %>
+                    <div class="col-sm-6 wow fadeInLeftBig">
+                        <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
+                    </div>
+                    <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
+                        <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
+                        <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs
+                        </div>
+                        <p class="lead">
+                            <%=h truncate(article.text, :length => 200) %>
+                        </p>
+                        <div class="btn btn-embossed btn-warning"> 
+                            <%= link_to 'Read more', article_path(article) %>
+                        </div>
+                    </div> 
+                <% end %>  
             </div>
         </div>
     </div>
 
+
+        <!-- /.container -->
     <div class="content-section-a">
-
         <div class="container">
-
-             <div class="row">
-             
-                <div class="col-sm-6 pull-right wow fadeInRightBig">
-                    <img class="img-responsive " src="img/doge.png" alt="">
-                </div>
-             
-                <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
-                    <h2 class="h2_home wow fadeIn">Just for Kicks</h2>
-                    <p class="lead">A special thanks to Death to the Stock Photo. 
-                    </p>
-                    
-                    <ul class="descp lead2">
-                        <li><i class="glyphicon glyphicon-signal"></i> Reliable and Secure Platform</li>
-                        <li><i class="glyphicon glyphicon-refresh"></i> Everything is perfectly orgainized for future</li>
-                        <li><i class="glyphicon glyphicon-headphones"></i> Attach large file easily</li>
-                    </ul>
-                </div>           
+            <div class="row">
+                <% @articles.each do |article| %>
+                    <div class="col-sm-6 pull-right wow fadeInRightBig">
+                        <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
+                    </div>
+                    <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
+                        <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
+                        <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs
+                        </div>
+                        <p class="lead">
+                            <%=h truncate(article.text, :length => 200) %>
+                        </p>
+                        <div class="btn btn-embossed btn-warning"> 
+                            <%= link_to 'Read more', article_path(article) %>
+                        </div>
+                    </div> 
+                <% end %>  
             </div>
         </div>
-
+        <!-- /.container -->
     </div>
 
 
