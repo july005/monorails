@@ -163,13 +163,14 @@
 
 <!-- Contact -->
 
-    <div id="contact" class="content-section-a">
+    <div id="contact" class="content-section-c">
         <div class="container">
             <div class="row">
             
-                <div class="col-xs-12 text-center abcen1">
+                <div class="col-xs-12 text-center abcen3">
                     <h2 class="h1_home wow fadeIn">Ask a Question</h2>
                     <p class="lead" style="margin-top:0">Later today, your response will magically appear below.</p>
+                    <br><br>
                 </div>
             
             <form role="form" action="" method="post" >
@@ -201,29 +202,22 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
                         </div>
                     </div>
-
                     <div class= "img-responsive center-block box-icon rotate"> <i class="fa fa-magic fa-4x "> <input type="submit" name="submit" id="submit" value="Submit"> </i>
-                    </div>
-
-                                 
+                    </div>                  
                     </div>
                 </div>
             </form>
-            
             <hr class="featurette-divider hidden-lg">
-
             </div>
         </div>
     </div>
-
-
 
 <!-- Use it -->
 
     <div id ="useit" class="content-section-a">
         <div class="col-xs-12 text-center abcen1">
             <h2 class="h1_home wow fadeIn">Today's Advice</h2>
-            <p class="lead" style="margin-top:0">Everything you didn't know you need to know about Disney.</p>
+            <p class="lead" style="margin-top:0 ">Everything you didn't know you need to know about Disney.</p>
         </div>
 
 
@@ -251,7 +245,7 @@
     </div>
 
 
-    <div class="content-section-b"> 
+    <div class="content-section-a"> 
         <div class="container">
             <div class="row">
                 <% @articles.each do |article| %>
@@ -273,6 +267,7 @@
             </div>
         </div>
     </div>
+    <hr class="featurette-divider hidden-lg">
 
 
         <!-- /.container -->
@@ -301,7 +296,7 @@
     </div>
 
 
-
+ 
 <!-- What is -->
 
     <div id="whatis" class="content-section-b" style="border-top: 0">
@@ -330,8 +325,8 @@
                 </div><!-- /.col-lg-4 -->
                 
                 <div class="col-sm-4 wow fadeInDown text-center">
-                  <img  class="rotate" src="img/icon/retina.svg" alt="Generic placeholder image">
-                   <h3 class="h3_home wow fadeIn">Restaurants</h3>
+                    <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    <h3 class="h3_home wow fadeIn">Restaurants</h3>
                     <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
                   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
@@ -341,22 +336,22 @@
             <div class="row tworow">
             
                 <div class="col-sm-4  wow fadeInDown text-center">
-                  <img class="rotate" src="img/icon/laptop.svg" alt="Generic placeholder image">
+                  <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
                   <h3 class="h3_home wow fadeIn">Transportation</h3>
                   <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
                  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
                 
                 <div class="col-sm-4 wow fadeInDown text-center">
-                  <img  class="rotate" src="img/icon/map.svg" alt="Generic placeholder image">
-                   <h3 class="h3_home wow fadeIn">Families with small children</h3>
-                   <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-                   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                    <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    <h3 class="h3_home wow fadeIn">Families with small children</h3>
+                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
+                    <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
                 
                 <div class="col-sm-4 wow fadeInDown text-center">
-                  <img  class="rotate" src="img/icon/browser.svg" alt="Generic placeholder image">
-                   <h3 class="h3_home wow fadeIn">Adults and Solo Travelers</h3>
+                    <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    <h3 class="h3_home wow fadeIn">Adults and Solo Travelers</h3>
                  <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
                   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
