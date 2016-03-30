@@ -334,12 +334,12 @@ margin: 0 auto;
 .content-section-b {
 	border-top: 1px solid 	 	#d5e4ec;
 	border-bottom: 1px solid 	#d5e4ec;
-	padding: 90px 0; 
+	padding: 90px 5%; 
 }
 
 .content-section-c {
 	background-color: #f8f8f8;
-	padding: 90px 0; 
+	padding: 90px 5%; 
 }
 
 .section-heading {
