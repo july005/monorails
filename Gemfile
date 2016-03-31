@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
+gem 'aws-sdk', '< 2.0'
 gem "font-awesome-rails"
 gem 'simple_form'
 gem 'mail_form'
@@ -17,7 +19,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'aws-sdk-v1', '~> 1.66'
   gem 'byebug'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
