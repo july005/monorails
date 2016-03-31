@@ -1,11 +1,8 @@
 
+
+
 @charset "UTF-8";
 
-/*!
-Animate.css - http://erinuptoncosulich.com
-
-Copyright (c) 2015 Erin Upton-Cosulich
-*/
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -1083,6 +1080,10 @@ Copyright (c) 2015 Erin Upton-Cosulich
   animation-name: fadeInDownBig;
 }
 
+
+/*********************************** fade in left even below -- use NO child and maintain numbers -- DONE BUT NOT SURE IF ANIMATION NAME TAKES NTH CHILD */
+
+
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -1153,6 +1154,83 @@ Copyright (c) 2015 Erin Upton-Cosulich
   animation-name: fadeInLeftBig;
 }
 
+
+/*********************************** fade in left odd below -- use odd child and reverse numbers --DONE */
+
+
+@-webkit-keyframes fadeInLeft:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeft:nth-child(odd) {
+  -webkit-animation-name: fadeInLeft:nth-child(odd);
+  animation-name: fadeInLeft:nth-child(odd);
+}
+
+@-webkit-keyframes fadeInLeftBig:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftBig:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+    -ms-transform: translateX(2000px);
+    transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInLeftBig:nth-child(odd) {
+  -webkit-animation-name: fadeInLeftBig:nth-child(odd);
+  animation-name: fadeInLeftBig:nth-child(odd);
+}
+
+/************************************ fade in right even below --maintain numbers and use NO child --DONE*/
+
+
 @-webkit-keyframes fadeInRight {
   0% {
     opacity: 0;
@@ -1219,9 +1297,101 @@ Copyright (c) 2015 Erin Upton-Cosulich
 }
 
 .fadeInRightBig {
-  -webkit-animation-name: fadeInRightBig;
+  -webkit-animation-name: fadeInRightBig:nth-child(even);
+  animation-name: fadeInRightBig:nth-child(even);
+}
+
+@-webkit-animation-name: fadeInRightBig;
   animation-name: fadeInRightBig;
 }
+
+
+/******************************* fade in right odd below -- reverse numbers and use odd child */
+
+@-webkit-keyframes fadeInRight:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInRight:nth-child(odd) {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+
+@-webkit-keyframes fadeInRightBig:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightBig:nth-child(odd) {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+    -ms-transform: translateX(-2000px);
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.fadeInRightBig:nth-child(odd) {
+  -webkit-animation-name: fadeInRightBig:nth-child(even);
+  animation-name: fadeInRightBig:nth-child(even);
+}
+
+@-webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @-webkit-keyframes fadeInUp {
   0% {

@@ -1,6 +1,7 @@
-<div class="container">
-    <% @articles.each do |article| %>
-        <div class="row">
+
+    <div class="container">
+        <% @articles.each do |article| %>
+            <div class="row">
                 <div class="col-sm-6 wow pull-right fadeInRightBig polaroid">
                     <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
                 </div>
@@ -33,3 +34,7 @@
         </div>
 
     </div>
+
+
+
+
