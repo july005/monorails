@@ -198,7 +198,7 @@
                     <div class="form-group">
                         <label for="InputMessage"></label>
                         <div class="input-group">
-                            <textarea name="InputMessage" id="InputMessage" class="form-control" rows="4" required></textarea>
+                            <textarea name="InputMessage" id="InputMessage" class="form-control" rows="4" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother...</textarea>
                             <span class="input-group-addon"><i class="glyphicon glyphicon-ok form-control-feedback"></i></span>
                         </div>
                     </div>
@@ -207,7 +207,21 @@
                     </div>
                 </div>
             </form>
-            <hr class="featurette-divider hidden-lg">
+
+
+            <form role="form" id="contact-form"  method="POST" action="//formspree.io/erinuc@gmail.com">
+​
+                    <div class="form-group">
+                      <textarea class="form-control" id="message" name="message" rows="3" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother...</textarea>
+                    </div>
+​
+                    <input type="hidden" name="_next" value="//monorailsandmickeytales.com" />
+​
+                    <button type="submit" class="btn btn-default" value="Send">SEND<i class="icon-after fa fa-chevron-right"></i>
+                    </button>
+​
+                  </form>
+            <hr>
             </div>
         </div>
     </div>
@@ -215,87 +229,16 @@
 <!-- Use it -->
 
     <div id ="useit" class="content-section-a">
+        
         <div class="col-xs-12 text-center abcen1">
             <h2 class="h1_home wow fadeIn">Today's Advice</h2>
             <p class="lead" style="margin-top:0 ">Everything you didn't know you need to know about Disney.</p>
         </div>
 
-
-        <div class="container">
-            <div class="row">
-                <% @articles.each do |article| %>
-                    <div class="col-sm-6 pull-right wow fadeInRightBig">
-                        <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
-                    </div>
-                    <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
-                        <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
-                        <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs
-                        </div>
-                        <p class="lead">
-                            <%=h truncate(article.text, :length => 200) %>
-                        </p>
-                        <div class="btn btn-embossed btn-warning"> 
-                            <%= link_to 'Read more', article_path(article) %>
-                        </div>
-                    </div> 
-                <% end %>  
-            </div>
-        </div>
-        <!-- /.container -->
+        <%= render 'articles/welcomeindex' %>
+    
     </div>
 
-
-    <% @articles.each do |article| %>
-        <div class="content-section-a"> 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6 wow fadeInLeftBig">
-                        <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
-                    </div>
-                    <div class="col-sm-6 wow fadeInRightBig"  data-animation-delay="200">
-                        <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
-                        <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs
-                        </div>
-                        <p class="lead">
-                            <%=h truncate(article.text, :length => 200) %>
-                        </p>
-                        <div class="btn btn-embossed btn-warning"> 
-                            <%= link_to 'Read more', article_path(article) %>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </div>
-   <% end %>   
-
-
-        <!-- /.container -->
-    <div class="content-section-b">
-        <div class="container">
-            <div class="row">
-                <% @articles.each do |article| %>
-                    <div class="col-sm-6 pull-right wow fadeInRightBig">
-                        <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
-                    </div>
-                    <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
-                        <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
-                        <div class="sub-title lead3">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br> sdfs sit atmet sit dolor greand fdanrh sdfs
-                        </div>
-                        <p class="lead">
-                            <%=h truncate(article.text, :length => 200) %>
-                        </p>
-                        <div class="btn btn-embossed btn-warning"> 
-                            <%= link_to 'Read more', article_path(article) %>
-                        </div>
-                    </div> 
-                <% end %>  
-            </div>
-        </div>
-        <!-- /.container -->
-    </div>
-
-
- 
 <!-- What is -->
 
     <div id="whatis" class="content-section-a" style="border-top: 0">
@@ -430,6 +373,7 @@
                                     <div class="content-style-form content-style-form-4 ">
                                         <h2 class="morph-clone">Subscribe to our Newsletter</h2>
                                         <form>
+
                                             <p><label>Your Email Address</label><input type="text"/></p>
                                             <p><button>Subscribe me</button></p>
                                         </form>
