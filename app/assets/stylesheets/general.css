@@ -223,6 +223,36 @@ width: 50px;
 
 }
 
+/* My attaempt at photo cropping in circle
+
+.image-cropper {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 70%;
+    -moz-border-radius: 70%;
+    -ms-border-radius: 70%;
+    -o-border-radius: 70%;
+    border-radius: 70%;
+}
+img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+}
+
+
+p:nth-child(odd) {
+    background: #ff0000;
+}
+
+p:nth-child(even) {
+    background: #0000ff;
+}
+*/
+
 .owl-theme .owl-controls .owl-page span {
 background: #1abc9c !important;
 }

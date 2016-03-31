@@ -152,9 +152,9 @@
                     
                     <li class="menuItem"><a href="#contact">Ask</a></li>
                     <li class="menuItem"><a href="#useit">Today's Advice</a></li>
-                    <li class="menuItem"><a href="#screen">Archives</a></li>
-                    <li class="menuItem"><a href="#credits">Credits</a></li>
-                    <li class="menuItem"><a href="#whatis">About</a></li>
+                    <li class="menuItem"><a href="#whatis">Archives</a></li>
+                    
+                    <li class="menuItem"><a href="#screen">About</a></li>
                 </ul>
             </div>
            
@@ -245,10 +245,10 @@
     </div>
 
 
-    <div class="content-section-a"> 
-        <div class="container">
-            <div class="row">
-                <% @articles.each do |article| %>
+    <% @articles.each do |article| %>
+        <div class="content-section-a"> 
+            <div class="container">
+                <div class="row">
                     <div class="col-sm-6 wow fadeInLeftBig">
                         <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
                     </div>
@@ -263,15 +263,14 @@
                             <%= link_to 'Read more', article_path(article) %>
                         </div>
                     </div> 
-                <% end %>  
+                </div>
             </div>
         </div>
-    </div>
-    <hr class="featurette-divider hidden-lg">
+   <% end %>   
 
 
         <!-- /.container -->
-    <div class="content-section-a">
+    <div class="content-section-b">
         <div class="container">
             <div class="row">
                 <% @articles.each do |article| %>
@@ -299,7 +298,7 @@
  
 <!-- What is -->
 
-    <div id="whatis" class="content-section-b" style="border-top: 0">
+    <div id="whatis" class="content-section-a" style="border-top: 0">
         <div class="container">
 
             <div class="col-md-6 col-md-offset-3 text-center wrap_title">
@@ -311,13 +310,6 @@
             <div class="row">
             
                 <div class="col-sm-4 wow fadeInDown text-center">
-                    <%= link_to image_tag("archives_resort.jpg", class: "rotate", size: "300x300") %>
-                    <h3 class="h3_home wow fadeIn">Resorts</h3>
-                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-                    <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
-                </div><!-- /.col-lg-4 -->
-                
-                <div class="col-sm-4 wow fadeInDown text-center">
                    <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
                    <h3 class="h3_home wow fadeIn">Parks</h3>
                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
@@ -325,10 +317,17 @@
                 </div><!-- /.col-lg-4 -->
                 
                 <div class="col-sm-4 wow fadeInDown text-center">
-                    <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    <%= link_to image_tag("archives_restaurants.jpg", class: "rotate", size: "300x300") %>
                     <h3 class="h3_home wow fadeIn">Restaurants</h3>
                     <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
                   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-sm-4 wow fadeInDown text-center">
+                    <%= link_to image_tag("archives_resort.jpg", class: "rotate", size: "300x300") %>
+                    <h3 class="h3_home wow fadeIn">Resorts</h3>
+                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
+                    <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
                 
             </div><!-- /.row -->
@@ -336,24 +335,24 @@
             <div class="row tworow">
             
                 <div class="col-sm-4  wow fadeInDown text-center">
-                  <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                  <%= link_to image_tag("archives_transport.jpg", class: "rotate", size: "300x300") %>
                   <h3 class="h3_home wow fadeIn">Transportation</h3>
                   <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
                  <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
                 
                 <div class="col-sm-4 wow fadeInDown text-center">
-                    <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
-                    <h3 class="h3_home wow fadeIn">Families with small children</h3>
-                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
-                    <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
-                </div><!-- /.col-lg-4 -->
-                
-                <div class="col-sm-4 wow fadeInDown text-center">
-                    <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    <%= link_to image_tag("archives_adults.jpg", class: "rotate", size: "300x300") %>
                     <h3 class="h3_home wow fadeIn">Adults and Solo Travelers</h3>
                  <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
                   <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
+                </div><!-- /.col-lg-4 -->
+
+                <div class="col-sm-4 wow fadeInDown text-center">
+                    <%= link_to image_tag("archives_families.jpg", class: "rotate", size: "300x300") %>
+                    <h3 class="h3_home wow fadeIn">Families with small children</h3>
+                    <p class="lead">Epsum factorial non deposit quid pro quo hic escorol. Olypian quarrels et gorilla congolium sic ad nauseum. </p>
+                    <!-- <p><a class="btn btn-embossed btn-primary view" role="button">View Details</a></p> -->
                 </div><!-- /.col-lg-4 -->
                 
             </div><!-- /.row -->
@@ -364,10 +363,10 @@
 
 
 <!-- Screenshot -->
-    <div class="content-section-a" style="border-top: 0">
+    <div class="content-section-b" style="border-top: 0">
         <div class="container">
             <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-                <h2 class="h1_home wow fadeIn">More stuff</h2>
+                <h2 class="h1_home wow fadeIn">About Me</h2>
                 <p class="lead" style="margin-top:0">Subtitle goes here.</p> 
             </div>
         <div class="container">
@@ -416,7 +415,7 @@
 
     </div>
     
-    <div class="content-section-b" style="border-top: 0">
+    <div class="content-section-a" style="border-top: 0">
         <div class="container">
             <div class="text-center">
                 <h2 class="h1_home wow fadeIn">Get live updates</h2>
@@ -425,7 +424,7 @@
             <div class="col-md-6 col-md-offset-3 text-center">
                 <div class="mockup-content">
                     <div class="morph-button wow pulse morph-button-inflow morph-button-inflow-1">
-                        <button type="btn btn-embossed btn-info"><span>Subscribe to our Newsletter</span></button>
+                        <button type="btn btn-info btn-embossed"><span>Subscribe to our Newsletter</span></button>
                             <div class="morph-content">
                                 <div>
                                     <div class="content-style-form content-style-form-4 ">
@@ -544,7 +543,12 @@
                             <hr>
 													<ol><li>BACK END STUFF:</li> 
 
-														<li><p><%= link_to 'Devise: Add an admin role', "https://github.com/plataformatec/devise/wiki/How-To:-Add-an-Admin-role" %></p></li>
+														<li><p>On heroku: Aws::Errors::MissingRegionError (missing region; use :region option or export region name to ENV['AWS_REGION']): ... articles_controller.rb:31</p></li>
+
+                                                        <li><p><%= link_to 'Make second and third articles pull using secondfromlast method', "http://stackoverflow.com/questions/7222495/how-do-i-pick-the-last-and-the-second-to-last-entries-in-a-blog-model" %></p>
+                                                        </li>
+
+                                                        <li><p><%= link_to 'Devise: Add an admin role', "https://github.com/plataformatec/devise/wiki/How-To:-Add-an-Admin-role" %></p></li>
 														
 														<li><p><%= link_to 'Gem for creating a full featured Blog in Rails Application?', "http://stackoverflow.com/questions/21016098/gem-for-creating-a-full-featured-blog-in-rails-application" %></p></li>
 																			
@@ -555,13 +559,13 @@
 														<li><p><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></p>
                                                         </li>
 
-                                                        <li><p><%= link_to 'Make second and third articles pull using secondfromlast method', "http://stackoverflow.com/questions/7222495/how-do-i-pick-the-last-and-the-second-to-last-entries-in-a-blog-model" %></p>
-                                                        </li>
                                                         <li>FRONT END BOOTSTRAP THEME INTEGRATION:</li> 
                                                         <br>
 															<ul>
-																<li>CSS: Make sure all styelsheets are linked to in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server)</li
-													>
+																<li>Responsiveness: it's not responsive when I look at it on just the small Mac screen</li>
+
+                                                                <li>CSS: Make sure all styelsheets are linked to in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server)</li>
+													
 																<li>FONT FILES: For font awesome do them the rails way or just scrap all that and use google fonts with @import? There are some CSS files in the font awesome file</li>
 																
 																<li>JavaScript: None of the JS files are working; I just dropped them into the JS folder. They're probably not linked to correctly. Or is it because they're all Bootstrap Javascript and not coffeescript?</li>
