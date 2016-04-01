@@ -114,8 +114,8 @@ optgroup,
 select,
 textarea {
   color: inherit;
-  font: inherit;
   margin: 0;
+  font-family: 'Delius Swash Caps', cursive;
 }
 button {
   overflow: visible;

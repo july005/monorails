@@ -1130,7 +1130,8 @@ legend {
   border-bottom: none;
 }
 textarea {
-  font-size: 20px;
+  font-size: 40px;
+  font-family: 'Delius Swash Caps', cursive;
   line-height: 24px;
   padding: 5px 11px;
 }
@@ -1144,25 +1145,31 @@ label {
 }
 .form-control:-moz-placeholder {
   color: #b2bcc5;
+  font-family: 'Delius Swash Caps', cursive;
 }
 .form-control::-moz-placeholder {
   color: #b2bcc5;
   opacity: 1;
+  font-family: 'Delius Swash Caps', cursive;
 }
 .form-control:-ms-input-placeholder {
   color: #b2bcc5;
+  font-family: 'Delius Swash Caps', cursive;
 }
 .form-control::-webkit-input-placeholder {
   color: #b2bcc5;
+  font-family: 'Delius Swash Caps', cursive;
 }
 .form-control.placeholder {
   color: #b2bcc5;
+  font-family: 'Delius Swash Caps', cursive;
 }
 .form-control {
   border: 2px solid #bdc3c7;
-  color: #34495e;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  background: #8D9698 url('//orig03.deviantart.net/b762/f/2008/266/0/8/paper_by_francy84.jpg') repeat fixed 0 0;
+  color: #212121;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 45px;
   line-height: 1.467;
   padding: 8px 12px;
   height: 42px;
