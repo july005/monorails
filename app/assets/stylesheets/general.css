@@ -190,7 +190,6 @@ width: 50px;
 	-moz-border-radius: 35px;
 	border-radius: 100%;
 	padding: 30px 10px;
-	background-color: #f0f1ec;
 	color: #034b81;
 	text-align: center;
 	-webkit-transition: all 0.3s;
@@ -199,10 +198,12 @@ width: 50px;
 	margin-right: 15px;
 }
 
+/*
 .box-icon:hover {
 	background-color: #1abc9c;
 	color: #fff;
 }
+*/
 
 .box-icon-large {
 	height: 200px;
