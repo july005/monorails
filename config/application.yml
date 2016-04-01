@@ -1,6 +1,5 @@
 # Add configuration values here, as shown below.
 
-development:
 AWS_ACCESS_KEY_ID: "AKIAIBRJKVWEYV6MF4SQ"
 AWS_SECRET_ACCESS_KEY: "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"
 AWS_REGION: "us-east-1"
