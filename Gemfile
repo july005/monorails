@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 gem "font-awesome-rails"
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '~> 1.66'
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'simple_form'
 gem 'mail_form'
 gem 'jbuilder', '~> 2.0'

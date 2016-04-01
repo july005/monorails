@@ -15,4 +15,7 @@
 # Ignore Environment Configuration Files
 config/database.yml
 .env
-/config/initializers/env.rb
+config/initializers/env.rb
+
+# Ignore application configuration
+config/application.yml
