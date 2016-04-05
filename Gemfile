@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 3.5', '>= 3.5.6'
 gem "font-awesome-rails"
 gem 'paperclip', '~> 4.2'
 gem 'aws-sdk', '~> 1.66'
