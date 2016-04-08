@@ -417,7 +417,7 @@
 
                                                             <li><p>1) ACCESS TO SIGN UP/IN: 
                                                                 <ul>
-                                                                    <li>Delete the Sign in/sign up path in routes.rb??? <br>Make it so that not just ANY user but only ADMIN can create new posts--right now it's just "if USER signed in" not "if ADMIN signed in" - there won't be a link but anyone who types in monorailsandmickeytales.com/users/sign_up directly as a URL path can create login. At least only the user id tied to the post is the one who can delete or edit it. I just don't want people to be able to create new posts. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin?</p></li>
+                                                                    <li>Delete the Sign in/sign up path in routes.rb??? <br>Make it so that not just ANY user but only ADMIN can CREATE new posts--right now it's just "if USER signed in" not "if ADMIN signed in" - there won't be a link but anyone who types in monorailsandmickeytales.com/users/sign_up directly as a URL path can create login. At least only the user id tied to the post is the one who can delete or edit it. I just don't want people to be able to create new posts. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin?</p></li>
                                                                 </ul>
                                                             </li>
                                                             
