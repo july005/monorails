@@ -6,30 +6,25 @@
                 </div>
                 <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
                     <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
-                    <div class="sub-title lead3">Really I would like each of these to alternate using the :nth child CSS animation in "AnimatecssI_was_trying_to_change.css"
-                    </div>
-                    <p class="lead">
-                        <%=h truncate(article.text, :length => 200) %>
-                    </p>
-                    <div class="btn btn-embossed btn-warning"> 
-                        <%= link_to 'Read more', article_path(article) %>
-                    </div>
-                    <div class="btn btn-embossed btn-info"> 
-                        <%= link_to 'Edit', edit_article_path(article) %>
-                    </div>
-                    <div class="btn btn-embossed btn-danger"> 
-                        <%= link_to 'Delete', article_path(article),
-                            method: :delete,
-                            data: { confirm: 'Are you sure?' } %> 
-                    </div>
+                    <div class="sub-title lead3">Really I would like each of these to alternate using the :nth child CSS animation in "AnimatecssI_was_trying_to_change.css"</div>
+                    <p class="lead"><%=h truncate(article.text, :length => 200) %></p>
+                    <div class="btn btn-embossed btn-warning"> <%= link_to 'Read more', article_path(article) %></div>
+                    
+                    <% if article.user == current_user %> 
+                        <h2> Erin is signed in </h2> 
+                        <div class="btn btn-embossed btn-danger"> 
+                            <%= link_to 'Edit', edit_article_path(article) %>
+                        </div>
+                        <div class="btn btn-embossed btn-warning"> 
+                            <%= link_to 'Delete', article_path(article),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %> 
+                        </div>
+                    <% end %>
 
                 </div>
             </div>
         <hr>
         <hr>
-        <% end %> 
-        <div class="btn btn-embossed btn-success"> 
-            <%= link_to 'New article', new_article_path %>
-        </div>
-
-    </div>
+    <% end %>
+</div>

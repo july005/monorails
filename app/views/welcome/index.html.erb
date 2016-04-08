@@ -210,20 +210,29 @@
                 </div>
             </form>-->
 
-
-            <form role="form" id="contact-form"  method="POST" action="//formspree.io/erinuc@gmail.com">
-​
+                <form role="form" id="contact-form"  method="POST" action="//formspree.io/erinuc@gmail.com">
                     <div class="form-group">
                       <textarea class="form-control" id="message" name="message" rows="3" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother...</textarea>
                     </div>
-​
                     <input type="hidden" name="_next" value="//monorailsandmickeytales.com" />
-​
-                    
                     <div class= "img-responsive center-block box-icon rotate"><input type="submit" name="submit" id="submit" ></div> 
-​
-                  </form>
-            <hr>
+                </form>
+
+            
+
+        <!-- LOGIN STUFF -->
+    
+                <% if user_signed_in? %>
+                    <h1>Erin is signed in--note this is just if a USER is signed in, not if ADMIN is signed in</h1>
+                    <div class="btn btn-embossed btn-danger"><%= link_to "New Article", new_article_path  %></div>
+                    <div class="btn btn-embossed btn-info"><%= link_to "Account", edit_user_registration_path  %></div>
+                    <div class="btn btn-embossed btn-warning"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></div>
+                <% else %>
+                    <p> User not signed in yet. Delete & use a direct login URL before going live </p>
+                    <div class="btn btn-embossed btn-info btn-xl"><%= link_to "Sign Up", new_user_registration_path  %></div>
+                    <div class="btn btn-embossed btn-danger btn-xl"><%= link_to "Sign In", new_user_session_path  %></div>
+                <% end %>
+                <hr>
             </div>
         </div>
     </div>
@@ -402,20 +411,34 @@
                                                     <ol><li>BACK END STUFF:</li> 
                                                         <ul>
 
-                                                            <li><p>On heroku: Aws::Errors::MissingRegionError (missing region; use :region option or export region name to ENV['AWS_REGION']): ... articles_controller.rb:31</p></li>
+                                                            <li><p><del>On heroku: Aws::Errors::MissingRegionError (missing region; use :region option or export region name to ENV['AWS_REGION']): ... articles_controller.rb:31</del></p></li>
 
-                                                            <li><p><%= link_to 'Make second and third articles pull using secondfromlast method', "http://stackoverflow.com/questions/7222495/how-do-i-pick-the-last-and-the-second-to-last-entries-in-a-blog-model" %></p>
+                                                            <li><p><del><%= link_to 'Devise: Add an admin role', "https://github.com/plataformatec/devise/wiki/How-To:-Add-an-Admin-role" %></del></p></li>
+
+                                                            <li><p>1) ACCESS TO SIGN UP/IN: 
+                                                                <ul>
+                                                                    <li>Delete the Sign in/sign up path in routes.rb??? <br>Make it so that not just ANY user but only ADMIN can create new posts--right now it's just "if USER signed in" not "if ADMIN signed in" - there won't be a link but anyone who types in monorailsandmickeytales.com/users/sign_up directly as a URL path can create login. At least only the user id tied to the post is the one who can delete or edit it. I just don't want people to be able to create new posts. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin?</p></li>
+                                                                </ul>
+                                                            </li>
+                                                            
+                                                            <li>2) DB MIGRATIONS TO ADD TO POSTS: 
+                                                                <ul>
+                                                                    <li><p><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></p></li>
+                                                                    <li>add the subtitle and then edit the text in welcome/index.html.erb so that it's ruby code instead of the straight text I typed in</li>
+                                                                </ul>
                                                             </li>
 
-                                                            <li><p><%= link_to 'Devise: Add an admin role', "https://github.com/plataformatec/devise/wiki/How-To:-Add-an-Admin-role" %></p></li>
-                                                            
-                                                            <li><p><%= link_to 'Gem for creating a full featured Blog in Rails Application?', "http://stackoverflow.com/questions/21016098/gem-for-creating-a-full-featured-blog-in-rails-application" %></p></li>
-                                                                                
-                                                            <li><p><%= link_to 'Interactive user interface called Apotomo', "https://github.com/apotonick/apotomo" %></li>CodeNewbie slack: CMS like Comfortable Mexican Sofa etc...?</p>
-                                                            
-                                                            <li><p><%= link_to 'Or just a WYSIWYG editor', "https://www.reddit.com/r/rails/comments/2ukgm3/looking_for_a_good_wysiwyg/" %></p></li>
-                                                            
-                                                            <li><p><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></p>
+                                                            <li>3) WYSIWYG or FULL FEATURED BLOG
+                                                                <ul>
+
+                                                                    <li><p><%= link_to 'Gem for creating a full featured Blog in Rails Application?', "http://stackoverflow.com/questions/21016098/gem-for-creating-a-full-featured-blog-in-rails-application" %></p></li>
+                                                                                        
+                                                                    <li><p><%= link_to 'Interactive user interface called Apotomo', "https://github.com/apotonick/apotomo" %></li>CodeNewbie slack: CMS like Comfortable Mexican Sofa etc...?</p>
+                                                                    
+                                                                    <li><p><%= link_to 'Or just a WYSIWYG editor', "https://www.reddit.com/r/rails/comments/2ukgm3/looking_for_a_good_wysiwyg/" %></p></li>
+                                                                </ul>    
+                                                            </li>
+                                                            <li><p><%= link_to '4) Make second and third articles pull using secondfromlast method so I can use the old formatting and pull them in different directions', "http://stackoverflow.com/questions/7222495/how-do-i-pick-the-last-and-the-second-to-last-entries-in-a-blog-model" %></p>
                                                             </li>
                                                         </ul>
 
