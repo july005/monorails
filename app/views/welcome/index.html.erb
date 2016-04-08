@@ -223,7 +223,7 @@
         <!-- LOGIN STUFF -->
     
                 <% if user_signed_in? %>
-                    <h1>Erin is signed in--note this is just if a USER is signed in, not if ADMIN is signed in</h1>
+                    <h2>Erin is signed in--note this is just if a USER is signed in, not if ADMIN is signed in--BUT that doesn't seem to matter since no one else can sign up since I deleted the user registrations paths </h2>
                     <div class="btn btn-embossed btn-danger"><%= link_to "New Article", new_article_path  %></div>
                     <div class="btn btn-embossed btn-warning"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></div>
                 <% else %>
@@ -415,17 +415,20 @@
 
                                                             <li><p>1) ACCESS TO SIGN UP/IN: 
                                                                 <ul>
-                                                                    <li>Delete the Sign in/sign up path in routes.rb??? <br>Make it so that not just ANY user but only ADMIN can CREATE new posts--right now it's just "if USER signed in" not "if ADMIN signed in" - there won't be a link but anyone who types in monorailsandmickeytales.com/users/sign_up directly as a URL path can create login. At least only the user id tied to the post is the one who can delete or edit it. I just don't want people to be able to create new posts. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin?<br><br>but I personally still need to log in and out ... but no one else can register now anyway so it should be fine? Katie Koenig said: I’ve only setup devise with policy permissions and didn’t have to delete anything</p></li>
+                                                                    <li><del>there won't be a button but anyone who types in monorailsandmickeytales.com/users/sign_up directly as a URL path can create login -- taken care of because there's no more sign up paths because I deleted :registerable. I personally  need to log in and out ... but no one else can register now anyway so it should be fine </del></li>
+                                                                    <br><li>Delete ANY lingering sign up/user registrations path in routes.rb (don't seem to be any)/controller/model--anywhere in app, do search (see email with dees suggestions)</li>
+                                                                    <br><li> Extra precaution? Make it so not just ANY user but only me with user_id == 1 can CREATE new posts--right now it's just "if USER signed in" not "if ADMIN signed in". At least only the user id tied to the post is the one who can delete or edit it. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin? </li>
+                                                                    <br><li>Katie Koenig (relevant for landscaping site): "I’ve only setup devise with policy permissions and didn’t have to delete anything"</li>
                                                                 </ul>
                                                             </li>
-                                                            
+                                                            <br><br>
                                                             <li>2) DB MIGRATIONS TO ADD TO POSTS: 
                                                                 <ul>
                                                                     <li><p><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></p></li>
                                                                     <li>add the subtitle and then edit the text in welcome/index.html.erb so that it's ruby code instead of the straight text I typed in</li>
                                                                 </ul>
                                                             </li>
-
+                                                            <br><br>
                                                             <li>3) WYSIWYG or FULL FEATURED BLOG
                                                                 <ul>
 
@@ -439,7 +442,7 @@
                                                             <li><p><%= link_to '4) Make second and third articles pull using secondfromlast method so I can use the old formatting and pull them in different directions', "http://stackoverflow.com/questions/7222495/how-do-i-pick-the-last-and-the-second-to-last-entries-in-a-blog-model" %></p>
                                                             </li>
                                                         </ul>
-
+                                                        <br><br>        
                                                         <li>FRONT END BOOTSTRAP THEME INTEGRATION:</li> 
                                                         <br>
                                                             <ul>
