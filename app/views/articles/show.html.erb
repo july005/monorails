@@ -5,6 +5,7 @@
 		<div class="row">							
 			<%= image_tag @article.image.url(:large), :class => "img-responsive" %>
       <h3><strong><%= @article.title %><strong></h3>
+      <p><strong><%= @article.subtitle %></strong></p>
       <p><%= @article.text %></p>
     </div>
 

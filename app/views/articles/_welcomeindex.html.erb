@@ -7,10 +7,10 @@
                 </div>
                 <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
                     <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
-                    <div class="sub-title lead3">Really I would like each of these to alternate using the :nth child CSS animation in "AnimatecssI_was_trying_to_change.css"
-                    </div>
+                    <div class="sub-title lead3"><%= article.subtitle %></div> 
                     <p class="lead">
-                        <%=h truncate(article.text, :length => 200) %>
+                        Really I would like each of these to alternate using the :nth child CSS animation in "AnimatecssI_was_trying_to_change.css" but ....
+                        <%=h truncate(article.text, :length => 120) %>
                     </p>
                     <div class="btn btn-embossed btn-warning"> 
                         <%= link_to 'Reveal', article_path(article) %>
