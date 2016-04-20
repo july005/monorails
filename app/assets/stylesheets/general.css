@@ -283,7 +283,7 @@ background: #1abc9c !important;
 /* Nav */
 .navbar {
 	position: relative;
-	min-height: 60px;
+	min-height: 20px;
 	margin-bottom: 0; 
 	width: 100%;
 	z-index: 999;
@@ -292,7 +292,7 @@ background: #1abc9c !important;
 
 .navbar-default {
 	position: relative;
-	min-height: 60px;
+	min-height: 20px;
 	width: 100%;
 	z-index: 999;
 	
@@ -325,10 +325,10 @@ color: #ECEBEB;
 }
 
 .intro-header {
-	height: 93%; /* Full PAge */
+	height: 40%; /* Full PAge */
 	padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
 	padding-bottom: 0px;
-	background: url(bg2.jpg) no-repeat center center;
+	background: url(bgdeletedthis.jpg) no-repeat center center;
 	background-size: cover;
 	text-align: center;
 }

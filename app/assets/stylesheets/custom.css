@@ -25,6 +25,7 @@
 	-moz-transition: background-color 200ms ease;
 	-o-transition: background-color 200ms ease;
 	transition: background-color 200ms ease;
+
 }
 #top-nav.navbar .nav > li > a.download{
 	-webkit-border-radius: 3px;
@@ -371,7 +372,12 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
 
 }
 
-
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  
 @media (max-width: 480px) {
 	.navbar-fixed-top, .navbar-fixed-bottom {
 	position: static;
