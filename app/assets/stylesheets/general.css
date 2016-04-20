@@ -435,6 +435,9 @@ margin: 0 auto;
     -o-transform:rotate(360deg);
 }  
 
+.delete {
+	color: red;
+}
 
 
 /* Style for form modal */
