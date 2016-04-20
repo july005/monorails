@@ -74,6 +74,18 @@
 <!-- FullScreen -->
 
 
+    <div class="intro-header">
+        <div class="col-xs-12 text-center abcen2">
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="h1_home wow fadeIn" data-wow-delay="0.4s">Monorails & Mickey Tales</h1>
+                    <h3 class="h3_home wow fadeIn" data-wow-delay="0.6s">Your Fairy Godmother of  Disney World trip planning</h3>
+                    <div class="img-responsive center-block box-icon rotate"><%= image_tag("fairygirledit.png") %></div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
 
                     <!-- buttons I'm not using 
 
@@ -148,30 +160,6 @@
            
         </div>
     </nav>
-
-<!-- Carousel -->
-
-    <div class="content-section-b" style="border-top: 0">
-        <div class="container">
-            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-                
-                <!-- 
-                  <p class="lead" style="margin-top:0">
-                    Ideas: http://www.pixiedreaming.com/magic-kingdom.html 
-                  </p> 
-                -->
-                
-            </div>
-        <div class="container">
-            <div class="row wow bounceInUp" >
-              
-
-                 <%= render 'articles/welcomeindex' %>
-
-                   
-          </div>
-        </div>
-    </div>
 
 <!-- Contact -->
 
@@ -323,7 +311,61 @@
         </div>
     </div>
 
-<!-- Newsletter subscribe -->
+
+
+
+<!-- Screenshot -->
+    <div class="content-section-b" style="border-top: 0">
+        <div class="container">
+            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                <h2 class="h1_home wow fadeIn">About Me</h2>
+                <p class="lead" style="margin-top:0">Ideas: http://www.pixiedreaming.com/magic-kingdom.html</p> 
+            </div>
+        <div class="container">
+            <div class="row wow bounceInUp" >
+              <div id="owl-demo" class="owl-carousel">
+                
+                <a href="img/slide/1.png" class="image-link">
+                    <div class="item">
+                        <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    </div>
+                </a>
+                
+               <a href="img/slide/2.png" class="image-link">
+                    <div class="item">
+                        <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    </div>
+                </a>
+                
+                <a href="img/slide/3.png" class="image-link">
+                    <div class="item">
+                        <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    </div>
+                </a>
+                
+                <a href="img/slide/1.png" class="image-link">
+                    <div class="item">
+                        <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    </div>
+                </a>
+                
+               <a href="img/slide/2.png" class="image-link">
+                    <div class="item">
+                        <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    </div>
+                </a>
+                
+                <a href="img/slide/3.png" class="image-link">
+                    <div class="item">
+                        <%= link_to image_tag("archives_parks.jpg", class: "rotate", size: "300x300") %>
+                    </div>
+                </a>
+              </div>       
+          </div>
+        </div>
+
+
+    </div>
     
     <div class="content-section-a" style="border-top: 0">
         <div class="container">
