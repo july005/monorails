@@ -11,7 +11,12 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-	def new
+  def latest
+    articles = Article.order('created_at DESC').limit(4)
+    @articles = Article.order('created_at DESC').limit(4)
+  end
+
+  def new
   	@article = current_user.articles.build
 	end
 

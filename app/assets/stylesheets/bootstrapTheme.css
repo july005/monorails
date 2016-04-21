@@ -761,7 +761,7 @@ dd {
   margin-left: 180px;
 }
 hr {
-  margin: 22px 0;
+  margin: 15px 0;
   border: 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff;
@@ -5831,4 +5831,20 @@ a.badge:focus {
     height: auto !important;
     overflow: visible !important;
   }
+}
+
+/* IMAGE OVERLAY THAT ERIN ADDED */
+
+
+.post-content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    opacity: 0.8;
+    top:10%;
+    left:1%;
+    position: absolute;
+}
+
+.thumbnail{
+    position:relative;
+    
 }
