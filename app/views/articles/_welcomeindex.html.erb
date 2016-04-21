@@ -1,13 +1,47 @@
-    <div class="container">
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            
 
 
-            <% @articles.each do |article| %>
-                <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
-                <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
-                <%= article.subtitle %></div> 
-                <p class="lead"><%=h truncate(article.text, :length => 120) %></p>
-                <div class="btn btn-embossed btn-warning"><%= link_to 'Reveal', article_path(article) %></div>
-            <% end %> 
+
+            <!--
+            <div class="thumbnail">
+            -->
+                <div class="col-md-8">
+
+                    <%= link_to article_path(@articles.first) do %>
+                        <%= image_tag @articles.first.image.url(:medium), :class => "img-responsive" %>
+                    <% end %>
+                    <!--
+                    <div class="caption post-content">
+                        <h2 class="h2_home wow fadeIn"><%= link_to @articles.first.title, article_path(@articles.first) %></h2>
+                        <div class="sub-title lead3"><%= link_to @articles.first.subtitle, article_path(@articles.first) %></div><br> 
+                    </div>
+                    -->
+                
+            </div>
 
 
+
+            
+             <div class="col-md-4">
+                <h3 class="h3_home wow fadeIn">Latest Tips</h3>
+                <hr>
+                <% @articles.each do |article| %>
+                    <p class="lead" style="margin-top:0">
+                        <%= link_to article.title, article_path(article) %>
+                    </p>
+                    <hr>
+                <% end %>
+            </div> 
+
+
+
+
+            <br>
+
+
+        </div>
     </div>
+</div>
