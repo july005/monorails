@@ -1,6 +1,4 @@
 class WelcomeController < ApplicationController
-  before_filter :disable_nav, only: [:welcome]
-
 
   def index
     articles = Article.order('created_at DESC').limit(4)
