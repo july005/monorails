@@ -1,64 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Monorails and Mickey Tales">
-    <meta name="author" content="">
-
-    <title>Monorails and Mickey Tales</title>
-
-    <!-- Bootstrap Core CSS ... 
-    **********
-    I need to link to these in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server) 
-  	**********
-  	-->
-
-	<%= stylesheet_link_tag "bootstrap.min" %>
-    <%= stylesheet_link_tag "general" %>
-    <%= stylesheet_link_tag "bootstrap" %>
-    <%= stylesheet_link_tag "bootstrapTheme" %>
-
-    <!-- Owl-Carousel CSS -->
-    <%= stylesheet_link_tag "custom" %>
-    <%= stylesheet_link_tag "owl.carousel" %>
-    <%= stylesheet_link_tag "owl.theme" %>
-    <%= stylesheet_link_tag "style" %>
-    <%= stylesheet_link_tag "animate" %>
-
-    <!-- Magnific Popup core CSS file -->
-    <%= stylesheet_link_tag "magnific-popup" %>
-    
-    <!--JS-->
-    <%= javascript_include_tag "modernizr-2.8.3.min" %>
-    <%= javascript_include_tag "articles" %>
-    <%= javascript_include_tag "bootstrap" %>
-    <%= javascript_include_tag "bootstrap.min" %>
-    <%= javascript_include_tag "classie" %>
-    <%= javascript_include_tag "comments" %>
-    <%= javascript_include_tag "html5shiv" %>
-    <%= javascript_include_tag "jquery-1.10.2" %>
-    <%= javascript_include_tag "jquery.corner" %>
-    <%= javascript_include_tag "jquery" %>
-    <%= javascript_include_tag "jquery.magnific-popup" %>
-    <%= javascript_include_tag "modernizr-2.8.3.min" %>
-    <%= javascript_include_tag "modernizr-custom" %>
-    <%= javascript_include_tag "owl.carousel" %>
-    <%= javascript_include_tag "PIE_IE678" %>
-    <%= javascript_include_tag "script" %>
-    <%= javascript_include_tag "stickUp.min" %>
-    <%= javascript_include_tag "uiMorphingButton_inflow" %>
-    <%= javascript_include_tag "welcome" %>
-    <%= javascript_include_tag "wow.min" %>
-     <!--Custom Google Web Font -->
-
-    <!--[if IE 9]><script src="js/PIE_IE9.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/PIE_IE678.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/html5shiv.js"></script><![endif]-->
-
-</head>
 
 
 <body id="home">
@@ -434,26 +376,24 @@
 
                                                             <li><del><%= link_to 'Devise: Add an admin role', "https://github.com/plataformatec/devise/wiki/How-To:-Add-an-Admin-role", :class => 'delete' %></del></li><br>
 
-                                                            <li><p>1) ACCESS TO SIGN UP/IN: 
+                                                            <li><p class="delete"><del>1) ACCESS TO SIGN UP/IN: </p></del>
                                                                 <ul>
                                                                     <li><p class="delete"><del>there won't be a button but anyone who types in monorailsandmickeytales.com/users/sign_up directly as a URL path can create login -- taken care of because there's no more sign up paths because I deleted :registerable. I personally  need to log in and out ... but no one else can register now anyway so it should be fine </del></p></li>
-                                                                    <br>
                                                                     <li><p class="delete"><del>Delete ANY lingering sign up/user registrations path in routes.rb (don't seem to be any)/controller/model--anywhere in app, do search (see email with dees suggestions)</del></p></li>
                                                                     <li><p class="delete"><del>Extra precaution? Make it so not just ANY user but only me with user_id == 1 can CREATE and EDIT new posts--right now it's just "if USER signed in" not "if ADMIN signed in". At least only the user id tied to the post is the one who can delete or edit it. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin? ...See also: http://stackoverflow.com/questions/29823475/rails-4-current-user-can-only-edit-their-post </del></p></li>
                                                                     <li><p class="delete"><del>Katie Koenig (relevant for landscaping site): "I’ve only setup devise with policy permissions and didn’t have to delete anything"</del></p></li>
                                                                 </ul>
                                                             </li>
-                                                            <br><li>Make it so that the main image is the first post (0) and the latest posts are posts 1-3 ... see: http://stackoverflow.com/questions/5738158/ruby-on-rails-last-throwing-undefined-methor-error</li>
-                                                            <br><li>Make the main image correspond to the post when you hover over each title... see: http://jsfiddle.net/joshnh/daFDn/   and see: https://css-tricks.com/forums/topic/how-to-make-hovering-over-one-div-to-trigger-changes-in-another-div/   ...see also http://stackoverflow.com/questions/14305262/display-a-div-when-hovering-on-another-div-using-css 
-                                                            <br><br>
-                                                            <li>2) DB MIGRATIONS TO ADD TO POSTS: 
+                                                            <li><p class="delete"><del>Make it so that the main image is the first post (0) and the latest posts are posts 1-3 ... see: http://stackoverflow.com/questions/5738158/ruby-on-rails-last-throwing-undefined-methor-error</li></p></del> 
+                                                            
+                                                            <li><p class="delete"><del>2) DB MIGRATIONS TO ADD TO POSTS: </p></del>
                                                                 <ul>
-                                                                    <li><p class="delete"><del><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></del></p></li>
+                                                                    <li><del><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails", class: 'delete' %></del></li>
                                                                     <li><p class="delete"><del>add the subtitle and then edit the text in welcome/index.html.erb so that it's ruby code instead of the straight text I typed in</del></p></li>
                                                                 </ul>
                                                             </li>
-                                                            <br><br>
-                                                            <li>3) WYSIWYG or FULL FEATURED BLOG
+                                                            
+                                                            <li><strong>3) WYSIWYG or FULL FEATURED BLOG</strong>
                                                                 <ul>
 
                                                                     <li><p><%= link_to 'Gem for creating a full featured Blog in Rails Application?', "http://stackoverflow.com/questions/21016098/gem-for-creating-a-full-featured-blog-in-rails-application" %></p></li>
@@ -466,19 +406,22 @@
                                                             <li><p><%= link_to '4) Make second and third articles pull using secondfromlast method so I can use the old formatting and pull them in different directions', "http://stackoverflow.com/questions/7222495/how-do-i-pick-the-last-and-the-second-to-last-entries-in-a-blog-model" %></p>
                                                             </li>
                                                         </ul>
-                                                        <br><br>        
-                                                        <li>FRONT END BOOTSTRAP THEME INTEGRATION:</li> 
-                                                        <br>
+                                                        <li><strong>FRONT END BOOTSTRAP THEME INTEGRATION:</strong></li> 
+                                                        
                                                             <ul>
-                                                                <li>Responsiveness: it's not responsive when I look at it on just the small Mac screen</li>
+                                                                <li><strong>Responsiveness</strong>: it's not responsive when I look at it on just the small Mac screen</li>
 
-                                                                <li>CSS: Make sure all styelsheets are linked to in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server)</li>
+                                                                <li><strong>CSS</strong>: Make sure all styelsheets are linked to in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server)</li>
                                                     
-                                                                <li>FONT FILES: For font awesome do them the rails way or just scrap all that and use google fonts with @import? There are some CSS files in the font awesome file</li>
+                                                                <li><strong>FONT FILES</strong>: For font awesome do them the rails way or just scrap all that and use google fonts with @import? There are some CSS files in the font awesome file</li>
                                                                 
-                                                                <li>JavaScript: None of the JS files are working; I just dropped them into the JS folder. They're probably not linked to correctly. Or is it because they're all Bootstrap Javascript and not coffeescript?</li>
+                                                                <li><strong>JavaScript</strong>: None of the JS files are working; I just dropped them into the JS folder. They're probably not linked to correctly. Or is it because they're all Bootstrap Javascript and not coffeescript?</li>
 
-                                                                <li>Design of index and other views: 
+                                                                <li><strong>JavaScript</strong>: I got rid of Turbolinks on April 22 using these fixes: http://blog.steveklabnik.com/posts/2013-06-25-removing-turbolinks-from-rails-4 ... But CodeNewbie mikerob215 said: Getting rid of turbolinks will fix a lot of things but then you lose turbolinks. Usually its an event handler issue when turbolinks is causing js not to run. The issue is usually that you are using document.ready, but with turbolinks the document is only ready once... When you click links turbolinks makes an ajax call to deliver the view. So if you go the turbolinks github they give a list of events that you can use https://github.com/turbolinks/turbolinks-classic ... if youre fine with losing the performance you get with turbolinks then just leave it but its not that hard to get it working.
+
+                                                                <li><strong>JavaScript</strong>:Make the main image correspond to the post when you hover over each title... see: http://jsfiddle.net/joshnh/daFDn/   and see: https://css-tricks.com/forums/topic/how-to-make-hovering-over-one-div-to-trigger-changes-in-another-div/   ...see also http://stackoverflow.com/questions/14305262/display-a-div-when-hovering-on-another-div-using-css</li>
+
+                                                                <li><strong>Design of index and other views</strong>: 
                                                                     <ul>
                                                                         <li> http://www.brit.co/</li>
                                                                         <li> http://news.microsoft.com/stories/index.html</li>
@@ -502,101 +445,15 @@
     <!-- Services -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Monorails and Mickey Tales</strong>
-                    </h4>
-                    <p>A faraway place<br>Never-Neverland</p>
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-phone fa-fw"></i> (123) 456-7890</li>
-                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:monorailsandmickeytales@gmail.com">monorailsandmickeytales@gmail.com</a>
-                        </li>
-                    </ul>
-                    <br>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="https://www.facebook.com/Monorailsandmickeytales/"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/monorailsandmickeytales/"><i class="fa fa fa-instagram fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
-                        </li>
-                    </ul>
-                    <hr class="small">
-                    <p class="text-muted">Copyright &copy; monorailsandmickeytales 2016</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+  
 
 
-<!-- JavaScript 
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/script.js"></script>
-    <!-- StikyMenu 
-    <script src="js/stickUp.min.js"></script>
-    <script type="text/javascript">
-      jQuery(function($) {
-        $(document).ready( function() {
-          $('.navbar-default').stickUp();
-          
-        });
-      });
-    
-    </script>
-    <!-- Smoothscroll     
-    <script type="text/javascript" src="js/jquery.corner.js"></script> 
-    <script src="js/wow.min.js"></script>
-    <script>
-     new WOW().init();
-    </script>
-    <script src="js/classie.js"></script>
-    <script src="js/uiMorphingButton_inflow.js"></script>
-    <!-- Magnific Popup core JS file -->
-    <script src="js/jquery.magnific-popup.js"></script> 
-<!-- jQuery 
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
 
-    <!-- Custom Theme JavaScript -->
-    <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
 
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
 
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
 
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
-                }
-            }
-        });
-    });
-    </script>
+
 </body>
 
 </html>

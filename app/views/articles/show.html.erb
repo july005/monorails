@@ -4,7 +4,8 @@
 
 		<div class="row">							
 			<%= image_tag @article.image.url(:large), :class => "img-responsive" %>
-      <h3><strong><%= @article.title %><strong></h3>
+      
+      <h2 class="h1_home wow fadeIn"><%= @article.title %></h2>
       <br><p><strong><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> Answer: <%= @article.subtitle %></strong></p>
       <br><p><%= @article.text %></p>
 
@@ -17,9 +18,10 @@
       <p>Tags: <%= render @article.tags %></p>
     </div>
   	
-  	<%= link_to 'Back', root_path %>
-
+  	<%= link_to 'Back', root_path(:anchor => 'useit') %>
+      
     <% if @article.user == current_user %>   
+      |
       <%= link_to 'Edit', edit_article_path(@article) %> 
       |
       <%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
