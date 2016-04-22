@@ -5,17 +5,19 @@
 		<div class="row">							
 			<%= image_tag @article.image.url(:large), :class => "img-responsive" %>
       <h3><strong><%= @article.title %><strong></h3>
-      <p><strong><%= @article.subtitle %></strong></p>
+      <p><strong><%= link_to image_tag("fairygirledit.png", class: "rotate", size: "40x40") %> <%= @article.subtitle %></strong></p>
       <p><%= @article.text %></p>
+
     </div>
 
     <div class="row">
     	<h3><strong>Comments<strong></h3>
     	<p><%= render @article.comments %></p>
     	<%= render 'comments/form' %>
+      <p>Tags: <%= render @article.tags %></p>
     </div>
   	
-  	<%= link_to 'Back, even though intro screen weirdly takes forever to load', root_path %>
+  	<%= link_to 'Back', root_path %>
 
     <% if @article.user == current_user %>   
       <%= link_to 'Edit', edit_article_path(@article) %> 

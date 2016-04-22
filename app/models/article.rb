@@ -7,4 +7,5 @@ class Article < ActiveRecord::Base
   validates :title, presence: true,
                     length: { minimum: 5 }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  acts_as_taggable_on :tags
 end

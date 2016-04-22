@@ -123,60 +123,6 @@
 <!-- NavBar-->
 
 
-    <nav class="navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <%= link_to image_tag("fairygirledit.png", class: "rotate", size: "40x40") %> 
-                <a class="navbar-brand" href="#home">monorails & mickey tales</a>
-                
-            </div>
-
-            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    
-                    <li class="menuItem"><a href="#contact">Ask</a></li>
-                    <li class="menuItem"><a href="#useit">Latest Tips</a></li>
-                    <li class="menuItem"><a href="#whatis">Topics</a></li>
-                    
-                    <li class="menuItem"><a href="#screen">About</a></li>
-                </ul>
-            </div>
-           
-        </div>
-    </nav>
-
-<!-- Carousel -->
-
-    <div id="useit" class="content-section-b" style="border-top: 0">
-        <!-- 
-        <div class="container">
-            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-                
-                
-                  <p class="lead" style="margin-top:0">
-                    Ideas: http://www.pixiedreaming.com/magic-kingdom.html 
-                  </p> 
-                
-
-            </div>
-        -->
-        <div class="container">
-            <div class="row wow bounceInUp" >
-
-                <%= render 'articles/welcomeindex' %>
-                   
-          </div>
-        </div>
-
-
-    </div>
-
 <!-- Contact -->
 
     <div id="contact" class="content-section-b">
@@ -184,11 +130,28 @@
             <div class="row">
             
                 <div class="col-xs-12 text-center abcen3">
-                    <h2 class="h1_home wow fadeIn">Ask a Question</i></h2>
-                    <p class="lead" style="margin-top:0">Later today, your response will magically appear below.</p>
-                    <br> <!--<i class="fa fa-magic fa-3x"></i>-->
-                    <br><br>
+                    <br>
+                    <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
+                    <br>
+                    <br>
+                    <br>
+                    <form role="form" id="contact-form"  method="POST" action="//formspree.io/monorailsandmickeytales@gmail.com">
+                        <div class="form-group">
+                          <textarea class="form-control" id="message" name="message" rows="6" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother: &#13;&#10;&#10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Click here to type your question]</textarea>
+                        </div>
+                        <input type="hidden" name="_next" value="//monorailsandmickeytales.com" />
+                        <br>
+                        <p class="lead" style="margin-top:0"><%= link_to image_tag("fairygirledit.png", class: "rotate", size: "40x40") %> Hi there! Send me your Disney trip planning questions.<br> I'll answer them below.</p>
+                        <!--<div class= "img-responsive center-block box-icon rotate"></div>-->
+                        <input type="submit" name="submit" id="submit" value="Send">
+                        <!--<button type="submit" class="btn btn-default" name="submit" id="submit" value="send">SEND <i class="fa fa-magic"></i></button>-->
+                    
+                    </form>
                 </div>
+                <hr>
+            </div>
+        </div>
+    </div>
             
             <!--
             <form role="form" action="" method="post" >
@@ -226,29 +189,41 @@
                 </div>
             </form>-->
 
-                <form role="form" id="contact-form"  method="POST" action="//formspree.io/erinuc@gmail.com">
-                    <div class="form-group">
-                      <textarea class="form-control" id="message" name="message" rows="3" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother...</textarea>
-                    </div>
-                    <input type="hidden" name="_next" value="//monorailsandmickeytales.com" />
-                    <div class= "img-responsive center-block box-icon rotate"><input type="submit" name="submit" id="submit" ></div> 
-                </form>
-
             
 
-        <!-- LOGIN STUFF -->
+        <!-- LOGIN STUFF 
     
                 <% if user_signed_in? %>
-                    <h4>Erin is signed in--note this is just if a USER is signed in, not if ADMIN is signed in--BUT that doesn't seem to matter since no one else can sign up since I deleted the user registrations paths </h4>
+                    <h4>Erin is signed in</h4>
                     <div class="btn btn-embossed btn-danger"><%= link_to "New Article", new_article_path  %></div>
                     <div class="btn btn-embossed btn-warning"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></div>
                 <% else %>
-                    <p> User not signed in yet. Delete & use a direct login URL before going live </p>
+                    <p> Not signed in. Delete & use direct login URL</p>
                     <div class="btn btn-embossed btn-danger btn-xl"><%= link_to "Sign In", new_user_session_path  %></div>
                 <% end %>
-                <hr>
+   
+
+<!-- Carousel -->
+
+    <div id="useit" class="content-section-a" style="border-top: 0">
+        <!-- 
+        <div class="container">
+            <div class="col-md-6 col-md-offset-3 text-center wrap_title">
+                
+                
+                  <p class="lead" style="margin-top:0">
+                    Ideas: http://www.pixiedreaming.com/magic-kingdom.html 
+                  </p> 
+                
+
+            </div>
+        -->
+        <div class="container">
+            <div class="row wow bounceInUp" >
+                <%= render 'articles/welcomeindex' %>   
             </div>
         </div>
+
     </div>
 
 <!-- Use it 
@@ -266,11 +241,11 @@
 
 <!-- What is -->
 
-    <div id="whatis" class="content-section-a" style="border-top: 0">
+    <div id="whatis" class="content-section-b" style="border-top: 0">
         <div class="container">
 
             <div class="col-md-6 col-md-offset-3 text-center wrap_title">
-                 <h2 class="h1_home wow fadeIn">Topics</h2>
+                <h2 class="h2_home wow fadeIn">Topics</h3>
                 <p class="lead" style="margin-top:0">Subtitle goes here.</p>
                 
             </div>
@@ -328,7 +303,7 @@
     </div>
 
 <!-- Screenshot -->
-    <div class="content-section-b" style="border-top: 0">
+    <div class="content-section-a" style="border-top: 0">
         <div class="container">
             <div class="col-md-6 col-md-offset-3 text-center wrap_title">
                 <h2 class="h1_home wow fadeIn">About Me</h2>
@@ -382,7 +357,7 @@
 
 <!-- Newsletter subscribe -->
     
-    <div class="content-section-a" style="border-top: 0">
+    <div class="content-section-b" style="border-top: 0">
         <div class="container">
             <div class="text-center">
                 <h2 class="h1_home wow fadeIn">Get live updates</h2>
@@ -420,7 +395,7 @@
                 <p class="lead" style="margin-top:0">Subtitle goes here.</p> 
             </div>
 
-                            <hr>
+                            <hr class="style15">
                                                     <ol><li>BACK END STUFF:</li> 
                                                         <ul>
 
@@ -443,7 +418,7 @@
                                                             <li>2) DB MIGRATIONS TO ADD TO POSTS: 
                                                                 <ul>
                                                                     <li><p><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></p></li>
-                                                                    <li>add the subtitle and then edit the text in welcome/index.html.erb so that it's ruby code instead of the straight text I typed in</li>
+                                                                    <li><p class="delete"><del>add the subtitle and then edit the text in welcome/index.html.erb so that it's ruby code instead of the straight text I typed in</del></p></li>
                                                                 </ul>
                                                             </li>
                                                             <br><br>
