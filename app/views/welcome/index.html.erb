@@ -35,6 +35,7 @@
     <%= javascript_include_tag "modernizr-2.8.3.min" %>
     <%= javascript_include_tag "articles" %>
     <%= javascript_include_tag "bootstrap" %>
+    <%= javascript_include_tag "bootstrap.min" %>
     <%= javascript_include_tag "classie" %>
     <%= javascript_include_tag "comments" %>
     <%= javascript_include_tag "html5shiv" %>
@@ -51,10 +52,7 @@
     <%= javascript_include_tag "uiMorphingButton_inflow" %>
     <%= javascript_include_tag "welcome" %>
     <%= javascript_include_tag "wow.min" %>
-    <!-- Custom Google Web Font -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+     <!--Custom Google Web Font -->
 
     <!--[if IE 9]><script src="js/PIE_IE9.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/PIE_IE678.js"></script><![endif]-->
@@ -120,8 +118,35 @@
 
 
 
-<!-- NavBar-->
+<!-- NavBar custom only for home page-->
 
+    <nav class="navbar-default" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <%= link_to image_tag("fairygirledit.png", class: "rotate", size: "40x40") %> 
+                <a class="navbar-brand" href="#home">monorails & mickey tales</a>
+                
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li class="menuItem"><a href="#contact">Ask</a></li>
+                    <li class="menuItem"><a href="#useit">Latest Tips</a></li>
+                    <li class="menuItem"><a href="#whatis">Topics</a></li>
+                    
+                    <li class="menuItem"><a href="#screen">About</a></li>
+                </ul>
+            </div>
+           
+        </div>
+    </nav>
 
 <!-- Contact -->
 
@@ -136,16 +161,19 @@
                     <br>
                     <br>
                     <form role="form" id="contact-form"  method="POST" action="//formspree.io/monorailsandmickeytales@gmail.com">
+                        <p class="lead" style="margin-top:0"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
+                            Hi, there! Type your Disney trip planning questions here <i class="fa fa-arrow-down" aria-hidden="true"></i> 
+                
+                             My answer will appear below shortly.</p>
                         <div class="form-group">
-                          <textarea class="form-control" id="message" name="message" rows="6" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother: &#13;&#10;&#10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Click here to type your question]</textarea>
+                          <textarea class="form-control" id="message" name="message" rows="8" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother: &#13;&#10;&#10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Click here to type your question]</textarea>
                         </div>
                         <input type="hidden" name="_next" value="//monorailsandmickeytales.com" />
                         <br>
-                        <p class="lead" style="margin-top:0"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
-                            Hi there! Type your Disney trip planning questions here <i class="fa fa-arrow-up" aria-hidden="true"></i> and then press <input type="submit" name="submit" id="submit" value="Send">
-                            <br>
-                             I'll answer them below <i class="fa fa-arrow-down" aria-hidden="true"></i> shortly</p>
-                        <!--<div class= "img-responsive center-block box-icon rotate"></div>-->
+                    
+                         <input type="submit" name="submit" id="submit" value="Send">
+                            
+                                                    <!--<div class= "img-responsive center-block box-icon rotate"></div>-->
                         
                         <!--<button type="submit" class="btn btn-default" name="submit" id="submit" value="send">SEND <i class="fa fa-magic"></i></button>-->
                     
@@ -306,7 +334,7 @@
     </div>
 
 <!-- Screenshot -->
-    <div class="content-section-a" style="border-top: 0">
+    <div id="screen" class="content-section-a" style="border-top: 0">
         <div class="container">
             <div class="col-md-6 col-md-offset-3 text-center wrap_title">
                 <h2 class="h1_home wow fadeIn">About Me</h2>
@@ -411,8 +439,8 @@
                                                                     <li><p class="delete"><del>there won't be a button but anyone who types in monorailsandmickeytales.com/users/sign_up directly as a URL path can create login -- taken care of because there's no more sign up paths because I deleted :registerable. I personally  need to log in and out ... but no one else can register now anyway so it should be fine </del></p></li>
                                                                     <br>
                                                                     <li><p class="delete"><del>Delete ANY lingering sign up/user registrations path in routes.rb (don't seem to be any)/controller/model--anywhere in app, do search (see email with dees suggestions)</del></p></li>
-                                                                    <br><li> Extra precaution? Make it so not just ANY user but only me with user_id == 1 can CREATE and EDIT new posts--right now it's just "if USER signed in" not "if ADMIN signed in". At least only the user id tied to the post is the one who can delete or edit it. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin? ...See also: http://stackoverflow.com/questions/29823475/rails-4-current-user-can-only-edit-their-post </li>
-                                                                    <br><li>Katie Koenig (relevant for landscaping site): "I’ve only setup devise with policy permissions and didn’t have to delete anything"</li>
+                                                                    <li><p class="delete"><del>Extra precaution? Make it so not just ANY user but only me with user_id == 1 can CREATE and EDIT new posts--right now it's just "if USER signed in" not "if ADMIN signed in". At least only the user id tied to the post is the one who can delete or edit it. Note: Not working in views/articles/index.html.erb, inside ruby tags: link_to 'New article', new_article_path if admin? ...See also: http://stackoverflow.com/questions/29823475/rails-4-current-user-can-only-edit-their-post </del></p></li>
+                                                                    <li><p class="delete"><del>Katie Koenig (relevant for landscaping site): "I’ve only setup devise with policy permissions and didn’t have to delete anything"</del></p></li>
                                                                 </ul>
                                                             </li>
                                                             <br><li>Make it so that the main image is the first post (0) and the latest posts are posts 1-3 ... see: http://stackoverflow.com/questions/5738158/ruby-on-rails-last-throwing-undefined-methor-error</li>
@@ -420,7 +448,7 @@
                                                             <br><br>
                                                             <li>2) DB MIGRATIONS TO ADD TO POSTS: 
                                                                 <ul>
-                                                                    <li><p><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></p></li>
+                                                                    <li><p class="delete"><del><%= link_to 'Add searchable categories', "http://stackoverflow.com/questions/17758401/how-to-create-categories-in-rails" %></del></p></li>
                                                                     <li><p class="delete"><del>add the subtitle and then edit the text in welcome/index.html.erb so that it's ruby code instead of the straight text I typed in</del></p></li>
                                                                 </ul>
                                                             </li>
@@ -507,12 +535,12 @@
     </footer>
 
 
-<!-- JavaScript -->
+<!-- JavaScript 
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/owl.carousel.js"></script>
     <script src="js/script.js"></script>
-    <!-- StikyMenu -->
+    <!-- StikyMenu 
     <script src="js/stickUp.min.js"></script>
     <script type="text/javascript">
       jQuery(function($) {
@@ -523,7 +551,7 @@
       });
     
     </script>
-    <!-- Smoothscroll -->
+    <!-- Smoothscroll     
     <script type="text/javascript" src="js/jquery.corner.js"></script> 
     <script src="js/wow.min.js"></script>
     <script>
@@ -533,11 +561,10 @@
     <script src="js/uiMorphingButton_inflow.js"></script>
     <!-- Magnific Popup core JS file -->
     <script src="js/jquery.magnific-popup.js"></script> 
-<!-- jQuery -->
+<!-- jQuery 
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script>
@@ -569,7 +596,8 @@
             }
         });
     });
-    </script></body>
+    </script>
+</body>
 
 </html>
 
