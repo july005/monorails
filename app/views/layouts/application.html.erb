@@ -52,6 +52,8 @@
     <%= javascript_include_tag "uiMorphingButton_inflow" %>
     <%= javascript_include_tag "welcome" %>
     <%= javascript_include_tag "wow.min" %>
+   
+
      <!--Custom Google Web Font -->
 
     <!--[if IE 9]><script src="js/PIE_IE9.js"></script><![endif]-->
@@ -61,11 +63,12 @@
 </head>
 
 
-
-<body>
+<body id="home">
 	<%= render 'layouts/navbar' unless current_page?(root_path) %>
   
   <%= yield %>
+
+	<%= render 'layouts/footer' %>
 
 	<p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
