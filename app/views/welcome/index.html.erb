@@ -100,20 +100,20 @@
                     <br>
                     <!-- <h2 class="h1_home wow fadeIn"> Ask      <i class="fa fa-magic"></i></h2> --> 
                     <br>
+                    <p class="lead" style="margin-top:0"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
+                            Hi, there! Type your Disney trip planning questions here <i class="fa fa-arrow-down" aria-hidden="true"></i> 
+                             My answer will appear below shortly.</p>
+
                     <br>
                     <br>
                     <form role="form" id="contact-form"  method="POST" action="//formspree.io/monorailsandmickeytales@gmail.com">
-                        <p class="lead" style="margin-top:0"><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "60x60") %> 
-                            Hi, there! Type your Disney trip planning questions here <i class="fa fa-arrow-down" aria-hidden="true"></i> 
-                
-                             My answer will appear below shortly.</p>
                         <div class="form-group">
-                          <textarea class="form-control" id="message" name="message" rows="8" requiredonfocus="this.value=''; this.onfocus=null;">Dear Fairy Godmother: &#13;&#10;&#10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Click here to type your question]</textarea>
+                          <textarea autofocus class="form-control" id="message" name="message" rows="8" requiredonfocus="this.value='' value="Dear you"; this.onfocus=null;">Dear Fairy Godmother: </textarea>
                         </div>
                         <input type="hidden" name="_next" value="//monorailsandmickeytales.com" />
                         <br>
                     
-                         <input type="submit" name="submit" id="submit" value="Send">
+                        <input type="submit" name="submit" id="submit" value="Send">
                             
                                                     <!--<div class= "img-responsive center-block box-icon rotate"></div>-->
                         
@@ -164,7 +164,7 @@
 
             
 
-        <!-- LOGIN STUFF 
+        <!-- LOGIN STUFF  -->
     
                 <% if user_signed_in? %>
                     <h4>Erin is signed in</h4>
@@ -409,14 +409,18 @@
                                                         <li><strong>FRONT END BOOTSTRAP THEME INTEGRATION:</strong></li> 
                                                         
                                                             <ul>
-                                                                <li><strong>Responsiveness</strong>: it's not responsive when I look at it on just the small Mac screen</li>
+                                                                <li><p><strong>Responsiveness</strong>: it's not responsive when I look at it on just the small Mac screen</p></li>
 
-                                                                <li><strong>CSS</strong>: Make sure all styelsheets are linked to in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server)</li>
-                                                    
+                                                                <li><p class="delete"><del><strong>CSS</strong>: Make sure all styelsheets are linked to in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server)</p></del></li>
+                                                                      
+                                                                <li><strong>CSS</strong>:Make cursor appear at END of text instead of at beginning of "dear fairy godmother"</li>
+                                                                <br> 
                                                                 <li><strong>FONT FILES</strong>: For font awesome do them the rails way or just scrap all that and use google fonts with @import? There are some CSS files in the font awesome file</li>
-                                                                
-                                                                <li><strong>JavaScript</strong>: None of the JS files are working; I just dropped them into the JS folder. They're probably not linked to correctly. Or is it because they're all Bootstrap Javascript and not coffeescript?</li>
-
+                                                                <br> 
+                                                                <li><strong>JavaScript?</strong>: Navbar on pages other than home is not sticking to top of page with scroll</li>
+                                                                <br>        
+                                                                <li><p class="delete"><del><strong>JavaScript</strong>: None of the JS files are working; I just dropped them into the JS folder. They're probably not linked to correctly. Or is it because they're all Bootstrap Javascript and not coffeescript?</p></del></li>
+                                                                <br> 
                                                                 <li><strong>JavaScript</strong>: I got rid of Turbolinks on April 22 using these fixes: http://blog.steveklabnik.com/posts/2013-06-25-removing-turbolinks-from-rails-4 ... But CodeNewbie mikerob215 said: Getting rid of turbolinks will fix a lot of things but then you lose turbolinks. Usually its an event handler issue when turbolinks is causing js not to run. The issue is usually that you are using document.ready, but with turbolinks the document is only ready once... When you click links turbolinks makes an ajax call to deliver the view. So if you go the turbolinks github they give a list of events that you can use https://github.com/turbolinks/turbolinks-classic ... if youre fine with losing the performance you get with turbolinks then just leave it but its not that hard to get it working.
 
                                                                 <li><strong>JavaScript</strong>:Make the main image correspond to the post when you hover over each title... see: http://jsfiddle.net/joshnh/daFDn/   and see: https://css-tricks.com/forums/topic/how-to-make-hovering-over-one-div-to-trigger-changes-in-another-div/   ...see also http://stackoverflow.com/questions/14305262/display-a-div-when-hovering-on-another-div-using-css</li>
@@ -442,10 +446,7 @@
         <!-- /.container -->
     </section>
 
-    <!-- Services -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-
-  
+<!-- JavaScript for Contact Me form autofocus -->
 
 
 

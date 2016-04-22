@@ -5,20 +5,26 @@
 		<div class="row">							
 			<%= image_tag @article.image.url(:large), :class => "img-responsive" %>
       
-      <h2 class="h1_home wow fadeIn"><%= @article.title %></h2>
+      <h2 class="h2_home wow fadeIn"><%= @article.title %></h2>
       <br><p><strong><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> Answer: <%= @article.subtitle %></strong></p>
       <br><p><%= @article.text %></p>
+      <hr>
+      <p class="text-muted">Tags: <%= render @article.tags %></p>
 
     </div>
 
     <div class="row">
-    	<h3><strong>Comments<strong></h3>
-    	<p><%= render @article.comments %></p>
+    	<h2 class="h2_home wow fadeIn">Leave a Comment</h2>
+      <hr>
     	<%= render 'comments/form' %>
-      <p>Tags: <%= render @article.tags %></p>
+      <hr>
+      <p><%= render @article.comments.reject(&:new_record?) %></p>
+      <hr>
+      <%= link_to 'Back', root_path(:anchor => 'useit'), class: "btn btn-primary" %>
+      <hr>
     </div>
   	
-  	<%= link_to 'Back', root_path(:anchor => 'useit') %>
+  	
       
     <% if @article.user == current_user %>   
       |

@@ -224,7 +224,35 @@ width: 50px;
 
 }
 
-/* My attaempt at photo cropping in circle
+/* Erin added this for forms */
+
+input[type=text] {
+	padding:5px; 
+	border:2px solid #ccc; 
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+input[type=text]:focus {
+	border-color:pink; 
+}
+
+input[type=submit] {
+	padding:1em; 
+	background: #FFD6BF; 
+	border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+}
+
+.textarea:focus { 
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+/* Erins attempt at photo cropping in circle
 
 .image-cropper {
     width: 100px;
