@@ -413,8 +413,23 @@
 
                                                                 <li><p class="delete"><del><strong>CSS</strong>: Make sure all styelsheets are linked to in the ERB way and declare them in config/initializers/assets.rb (and then restart rails server)</p></del></li>
                                                                       
-                                                                <li><strong>CSS</strong>:Make cursor appear at END of text instead of at beginning of "dear fairy godmother"</li>
+                                                                <li><strong>CSS</strong>: Make cursor appear at END of text instead of at beginning of "dear fairy godmother"</li>
                                                                 <br> 
+                                                                <li><strong>CSS</strong>: animate (expand/spin) on page load the down arrow pointing to the form</li>
+                                                                <br>
+                                                                <li><strong>CSS</strong>: Make outline of textarea (autofocus) in contact form be a better color than bright green</li>
+                                                                <br>
+                                                                <li><strong>CSS</strong>: animations: 
+                                                                    <ul>
+                                                                        <li>http://www.minimamente.com/example/magic_animations/</li>
+                                                                        <li>http://daneden.github.io/animate.css/</li>
+                                                                        <li>Textarea input fun: DEMO: http://yaireo.github.io/fancyInput/ CODE: https://github.com/yairEO/fancyInput#basic-use-example</li>
+                                                                        <li>Photo captions for home page blog images, plus page transitions: DEMO: http://h5bp.github.io/Effeckt.css/ CODE: https://github.com/h5bp/Effeckt.css/</li>
+                                                                        <li>button transitions ("ripple out" for send mail to fairy godmother): DEMO: http://ianlunn.github.io/Hover/</li>
+                                                                        <li>Nice page transitions in only CSS: DEMO: http://tympanus.net/Tutorials/SmoothTransitionsResponsiveLayout/ CODE: http://tympanus.net/codrops/2012/06/12/css-only-responsive-layout-with-smooth-transitions/</li>
+                                                                    </ul>
+                                                                </li>
+<br>
                                                                 <li><strong>FONT FILES</strong>: For font awesome do them the rails way or just scrap all that and use google fonts with @import? There are some CSS files in the font awesome file</li>
                                                                 <br> 
                                                                 <li><strong>JavaScript?</strong>: Navbar on pages other than home is not sticking to top of page with scroll</li>
@@ -422,9 +437,9 @@
                                                                 <li><p class="delete"><del><strong>JavaScript</strong>: None of the JS files are working; I just dropped them into the JS folder. They're probably not linked to correctly. Or is it because they're all Bootstrap Javascript and not coffeescript?</p></del></li>
                                                                 <br> 
                                                                 <li><strong>JavaScript</strong>: I got rid of Turbolinks on April 22 using these fixes: http://blog.steveklabnik.com/posts/2013-06-25-removing-turbolinks-from-rails-4 ... But CodeNewbie mikerob215 said: Getting rid of turbolinks will fix a lot of things but then you lose turbolinks. Usually its an event handler issue when turbolinks is causing js not to run. The issue is usually that you are using document.ready, but with turbolinks the document is only ready once... When you click links turbolinks makes an ajax call to deliver the view. So if you go the turbolinks github they give a list of events that you can use https://github.com/turbolinks/turbolinks-classic ... if youre fine with losing the performance you get with turbolinks then just leave it but its not that hard to get it working.
-
+<br>
                                                                 <li><strong>JavaScript</strong>:Make the main image correspond to the post when you hover over each title... see: http://jsfiddle.net/joshnh/daFDn/   and see: https://css-tricks.com/forums/topic/how-to-make-hovering-over-one-div-to-trigger-changes-in-another-div/   ...see also http://stackoverflow.com/questions/14305262/display-a-div-when-hovering-on-another-div-using-css</li>
-
+<br>
                                                                 <li><strong>Design of index and other views</strong>: 
                                                                     <ul>
                                                                         <li> http://www.brit.co/</li>
@@ -432,7 +447,8 @@
                                                                         <li> https://www.tescoliving.com/</li>
                                                                         <li> </li> 
                                                                     </ul>
-                                                                </li>    
+                                                                </li>
+                                                                <br>    
                                                                 <li>It should <%= link_to 'look like this theme', "http://startbootstrap.com/template-overviews/stylish-portfolio/" %></li>
                                                             </ul>
                                                         <br><br><br>
