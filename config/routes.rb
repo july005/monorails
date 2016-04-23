@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 	end
   resources :tags, only: [:index, :show]
   root 'welcome#index'
+
+
+  
 end
