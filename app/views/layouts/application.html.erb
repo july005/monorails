@@ -16,11 +16,12 @@
 
     <!-- Bootstrap Core CSS -->
 
-		<%= stylesheet_link_tag "bootstrap.min" %>
+	<%= stylesheet_link_tag "bootstrap.min" %>
     <%= stylesheet_link_tag "general" %>
     <%= stylesheet_link_tag "bootstrap" %>
     <%= stylesheet_link_tag "bootstrapTheme" %>
-
+    <%= stylesheet_link_tag "bootsy" %>
+    
     <!-- Owl-Carousel CSS -->
     <%= stylesheet_link_tag "custom" %>
     <%= stylesheet_link_tag "owl.carousel" %>
@@ -64,7 +65,7 @@
 
 
 <body id="home">
-	<%= render 'layouts/navbar' unless current_page?(root_path) %>
+<%= render 'layouts/navbar' unless current_page?(root_path) %>
   
   <%= yield %>
 

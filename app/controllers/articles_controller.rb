@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    
   end
 
   def latest
@@ -57,7 +58,7 @@ class ArticlesController < ApplicationController
  
 private
   def article_params
-    params.require(:article).permit(:title, :text, :image, :user_id, :subtitle, :tag_list)
+    params.require(:article).permit(:title, :text, :image, :user_id, :subtitle, :tag_list, :bootsy_image_gallery_id)
   end
 
 end

@@ -9,7 +9,7 @@
                 <div class="col-md-7">
 
                     <%= link_to article_path(@articles.first) do %>
-                        <%= image_tag @articles.first.image.url(:medium), :class => "img-responsive" %>
+                        <%= image_tag @articles.first.image.url, :class => "img-responsive" %>
                     <% end %>
                     <!--
                     <div class="caption post-content">

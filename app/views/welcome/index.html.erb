@@ -167,7 +167,7 @@
         <!-- LOGIN STUFF  -->
     
                 <% if user_signed_in? %>
-                    <h4>Erin is signed in</h4>
+                    <p>Erin is signed in</p>
                     <div class="btn btn-embossed btn-danger"><%= link_to "New Article", new_article_path  %></div>
                     <div class="btn btn-embossed btn-warning"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></div>
                 <% else %>
