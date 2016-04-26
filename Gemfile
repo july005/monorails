@@ -16,6 +16,11 @@ gem 'figaro', '~> 1.1', '>= 1.1.1'
 gem 'simple_form'
 gem 'mail_form'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'fog'
+gem 'rmagick', '~> 2.15', '>= 2.15.4'
+gem 'carrierwave'
+gem "fog-aws"
+gem 'bootsy', github: 'volmer/bootsy'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 

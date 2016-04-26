@@ -4,7 +4,7 @@
     <% @articles.each do |article| %>
             <div class="row">
                     <div class="col-sm-6 wow pull-right fadeInRightBig polaroid">
-                        <%= image_tag article.image.url(:medium), :class => "img-responsive, center-block" %>
+                        <%= image_tag article.image.url, :class => "img-responsive, center-block" %>
                     </div>
                     <div class="col-sm-6 wow fadeInLeftBig"  data-animation-delay="200">   
                         <h2 class="h2_home wow fadeIn"><%= article.title %></h2>
