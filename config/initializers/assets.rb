@@ -2,7 +2,7 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( bootsy/gallery-loader.gif )
+
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
@@ -23,7 +23,7 @@ Rails.application.config.assets.precompile += %w( magnific-popup.css )
 Rails.application.config.assets.precompile += %w( owl.carousel.css )
 Rails.application.config.assets.precompile += %w( owl.theme.css )
 Rails.application.config.assets.precompile += %w( style.css )
-Rails.application.config.assets.precompile += %w( bootsy.css )
+
 
 #Javascripts
 Rails.application.config.assets.precompile += %w( application.js )
