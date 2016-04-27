@@ -2,35 +2,37 @@
   
   <div class="jumbotron">
 
-		<div class="row">							
-			<%= image_tag @article.image.url(:thumb), :class => "img-responsive" %>
-      
-      <h2 class="h2_home wow fadeIn"><%= @article.title %></h2>
-      <br><p><strong><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> Answer: <%= @article.subtitle %></strong></p>
-      <br><p><%= @article.text %></p>
-      <hr>
-      <p class="text-muted">Tags: <%= render @article.tags %></p>
+		<div class="row">		
+    <div class="trix-content">					
+  			<%= image_tag @article.image.url(:large), :class => "img-responsive" %>
+        
+        <h2 class="h2_home wow fadeIn"><%= @article.title %></h2>
+        <br><p><strong><%= link_to image_tag("fairygirlhead.jpg", class: "rotate", size: "50x50") %> Answer: <%= @article.subtitle %></strong></p>
+        <br>
+        <%= @article.text.html_safe %></div>      
+        <hr>
+        <p class="text-muted">Tags: <%= render @article.tags %></p>
 
-    </div>
+      </div>
 
-    <div class="row">
-    	<h2 class="h2_home wow fadeIn">Leave a Comment</h2>
-      <hr>
-    	<%= render 'comments/form' %>
-      <hr>
-      <p><%= render @article.comments.reject(&:new_record?) %></p>
-      <hr>
-      <%= link_to 'Back', root_path(:anchor => 'useit'), class: "btn btn-primary" %>
-      <hr>
-    </div>
-  	
+      <div class="row">
+      	<h2 class="h2_home wow fadeIn">Leave a Comment</h2>
+        <hr>
+      	<%= render 'comments/form' %>
+        <hr>
+        <p><%= render @article.comments.reject(&:new_record?) %></p>
+        <hr>
+        <%= link_to 'Back', root_path(:anchor => 'useit'), class: "btn btn-primary" %>
+        <hr>
+      </div>
+  	</div>
   	
       
     <% if @article.user == current_user %>   
       |
-      <%= link_to 'Edit', edit_article_path(@article) %> 
+       <div class="btn btn-embossed btn-info"><%= link_to 'Edit', edit_article_path(@article) %> </div>
       |
-      <%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' } %>
+       <div class="btn btn-embossed btn-success"><%= link_to 'Delete', @article, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       |
       <div class="btn btn-embossed btn-danger"><%= link_to "New Article", new_article_path  %></div>
 

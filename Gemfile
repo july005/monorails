@@ -20,7 +20,7 @@ gem 'fog'
 gem 'rmagick', '~> 2.15', '>= 2.15.4'
 gem 'carrierwave'
 gem "fog-aws"
-gem 'bootsy', github: 'volmer/bootsy'
+gem 'trix', '~> 0.9.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 

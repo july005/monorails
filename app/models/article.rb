@@ -1,8 +1,7 @@
 require 'aws/s3'
 
 class Article < ActiveRecord::Base
-  include Bootsy::Container
-  mount_uploader :image, ImageUploader
+  #mount_uploader :image, ImageUploader
   has_many :comments, dependent: :destroy
   has_attached_file :image, styles: { large: "900x900>", medium: "500x500>", thumb: "250x250>" }
   belongs_to :user

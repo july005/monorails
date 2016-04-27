@@ -28,11 +28,11 @@
   </p>
   
   <%= f.label :text %>
-  <%= f.bootsy_area :text %>
+  <%= f.trix_editor :text %>
  
   <p>
     <%= f.label :tags %>
-    <%= f.text_field :tag_list %>
+    <%= f.text_field :tag_list, class: 'trix-content' %>
   </p>
 
   <p>
