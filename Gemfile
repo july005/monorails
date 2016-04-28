@@ -34,3 +34,5 @@ group :production do
  	gem 'rails_12factor', '~> 0.0.3'
 end
 
+gem 'dotenv-rails', :groups => [:development, :test]
+
